@@ -1,0 +1,30 @@
+Charmander
+Charmeleon
+Charizard
+Caterpie
+Metapod
+Butterfree
+Weedle
+Kakuna
+Beedrill
+Pidgey
+Pidgeotto
+Pidgeot
+Rattata (normal y alola)
+Raticate (normal y alola)
+Spearow
+Fearow
+Clefairy
+Clefable
+Vulpix (normal y alola)
+Ninetales (normal y alola)
+Jigglypuff
+Wigglituff
+Zubat
+Golbat
+Oddish
+Gloom
+Vileplume
+Paras
+Parasect
+Porygon
