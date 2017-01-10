@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="">
@@ -7,591 +8,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="./css/animate.min.css"><link rel="stylesheet" href="./css/font-awesome.min.css"><link rel="stylesheet" href="./css/et-line.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/et-line.min.css">
 
-	<script src="./js/jquery-2.1.0.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/blocs.min.js"></script>
-  <style>
-  * {
-    box-sizing: border-box;
-  }
+    <!-- Insert this line above script imports  -->
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
 
-  #myInput {
-    background-image: url('/css/searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-  }
+    <!-- normal script imports etc  -->
+    <script src="js/jquery-2.1.0.min.js"></script>
 
-  #myTable {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
-    font-size: 18px;
-  }
+    <!-- Insert this line after script imports -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/blocs.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-  #myTable th, #myTable td {
-    text-align: left;
-    padding: 12px;
-  }
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
 
-  #myTable tr {
-    border-bottom: 1px solid #ddd;
-  }
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
 
-  #myTable tr.header, #myTable tr:hover {
-    background-color: #f1f1f1;
-  }
-  </style>
+        #myTable th,
+        #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header,
+        #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
     <title>Pokedex</title>
 
 </head>
-<body>
-<!-- Main container -->
-<div class="page-container">
 
-<!-- bloc-0 -->
-<div class="bloc bgc-carmine-pink d-bloc" id="bloc-0">
-	<div class="container bloc-sm">
-		<nav class="navbar row">
-			<div class="navbar-header">
-				<a class="navbar-brand hidden-xs hidden-sm ltc-white" href="index.html">DexIO</a>
-				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+<body>
+    <!-- Main container -->
+    <div class="page-container">
+
+        <!-- bloc-0 -->
+        <div class="bloc bgc-carmine-pink d-bloc" id="bloc-0">
+            <div class="container bloc-sm">
+                <nav class="navbar row">
+                    <div class="navbar-header">
+                        <a class="navbar-brand hidden-xs hidden-sm ltc-white" href="index.html">DexIO</a>
+                        <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
-			</div>
-			<div class="navbar-collapse navbar-1 collapse">
-				<ul class="site-navigation nav navbar-nav">
-					<li>
-						<a href="index.html">Inicio</a>
-					</li>
-					<li>
-						<a href="pokedex.html">Pokedex</a>
-					</li>
-					<li>
-						<a href="editor.html">Editor</a>
-					</li>
-					<li>
-						<a href="calculadora.html">Calculadora</a>
-					</li>
-					<li>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-</div>
-<!-- bloc-0 END -->
+                    </div>
+                    <div class="navbar-collapse navbar-1 collapse">
+                        <ul class="site-navigation nav navbar-nav">
+                            <li>
+                                <a href="index.html">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="pokedex.html">Pokedex</a>
+                            </li>
+                            <li>
+                                <a href="editor.html">Editor</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html">Calculadora</a>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- bloc-0 END -->
 
-<!-- bloc-2 -->
-<div class="bloc bgc-white l-bloc" id="bloc-2">
-	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="text-center mg-md">
-					Pokedex <br>
-				</h2>
-
-
-			</div>
-		</div>
-		<div class="row voffset">
-				<div class="col-sm-3"><!--001-->
-          <a href="001.html">
-					<img class="img-responsive" src="./img/001.png">
-					<h3 class="text-center mg-md">
-						#001 Bulbasaur
-					</h3>
-          </a>
-					<p class="text-center">
-            <img src="./img/tipo_planta.png" width="80" class="pull-center">
-            <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-					</p>
-				</div>
-				<div class="col-sm-3"><!--002-->
-          <a href="002.html">
-					<img class="img-responsive" src="./img/002.png">
-					<h3 class="text-center mg-md">
-						#002 Ivysaur
-					</h3>
-          </a>
-					<p class="text-center">
-            <img src="./img/tipo_planta.png" width="80" class="pull-center">
-            <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-          </p>
-				</div>
-				<div class="col-sm-3"><!--003-->
-					<a href="003.html">
-            <p style="text-align:center">
-					  <img class="img-responsive" src="./img/003.png">
-          </p>
-					<h3 class="text-center mg-md">
-						#003 Venusaur
-					</h3>
-          </a>
-					<p class="text-center">
-            <img src="./img/tipo_planta.png" width="80" class="pull-center">
-            <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-					</p>
-				</div>
-        <div class="col-sm-3"><!--003M-->
-					<a href="003M.html">
-            <p style="text-align:center">
-					  <img class="img-responsive" src="./img/003M.png">
-          </p>
-					<h3 class="text-center mg-md">
-						#003 Mega Venusaur
-					</h3>
-          </a>
-					<p class="text-center">
-            <img src="./img/tipo_planta.png" width="80" class="pull-center">
-            <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-					</p>
-				</div>
-      </div>
-    <div class="row voffset">
-				<div class="col-sm-3"><!--004-->
-					<a href="004.html">
-            <img class="img-responsive" src="./img/004.png">
-					<h3 class="text-center mg-md">
-					  #004 Charmander
-					</h3>
-          </a>
-					<p class="text-center">
-						<img src="./img/tipo_fuego.png" width="80" class="pull-center">
-					</p>
-				</div>
-				<div class="col-sm-3"><!--005-->
-					<a href="005.html">
-					  <img class="img-responsive" src="./img/005.png">
-					<h3 class="text-center mg-md">
-						#005 Charmeleon
-					</h3>
-         </a>
-					<p class="text-center">
-						<img src="./img/tipo_fuego.png" width="80" class="pull-center">
-					</p>
-				</div>
-        <div class="col-sm-3"><!--006-->
-					<a href="006.html">
-					  <img class="img-responsive" src="./img/006.png">
-					<h3 class="text-center mg-md">
-						#006 Charizard
-					</h3>
-         </a>
-					<p class="text-center">
-						<img src="./img/tipo_fuego.png" width="80" class="pull-center">
-            <img src="./img/tipo_volador.png" width="80" class="pull-center">
-					</p>
-				</div>
-        <div class="col-sm-3"><!--006MX-->
-					<a href="006MX.html">
-					  <img class="img-responsive" src="./img/006MX.png">
-					<h3 class="text-center mg-md">
-						#006 Mega Charizard X
-					</h3>
-         </a>
-					<p class="text-center">
-						<img src="./img/tipo_fuego.png" width="80" class="pull-center">
-            <img src="./img/tipo_dragon.png" width="80" class="pull-center">
-					</p>
-				</div>
-      </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--006MY-->
-        <a href="006MY.html">
-          <img class="img-responsive" src="./img/006MY.png">
-        <h3 class="text-center mg-md">
-          #006 Mega Charizard Y
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_fuego.png" width="80" class="pull-center">
-          <img src="./img/tipo_volador.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--007-->
-					<a href="007.html">
-					  <img class="img-responsive" src="./img/007.png">
-					<h3 class="text-center mg-md">
-						#007 Squirtle
-					</h3>
-         </a>
-					<p class="text-center">
-						<img src="./img/tipo_agua.png" width="80" class="pull-center">
-					</p>
-				</div>
-			<div class="col-sm-3"><!--008-->
-					<a href="008.html">
-          <img class="img-responsive" src="./img/008.png">
-					<h3 class="text-center mg-md">
-						#008 Wartortle
-					</h3>
-          </a>
-					<p class="text-center">
-						<img src="./img/tipo_agua.png" width="80" class="pull-center">
-					</p>
-				</div>
-      <div class="col-sm-3"><!--009-->
-        <a href="009.html">
-          <img class="img-responsive" src="./img/009.png">
-        <h3 class="text-center mg-md">
-          #009 Blastoise
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_agua.png" width="80" class="pull-center">
-        </p>
-      </div>
+        <!-- bloc-2 -->
+        <div class="bloc bgc-white l-bloc" id="bloc-2">
+            <div class="container bloc-lg">
+                <div class="table-responsive">
+                    <input type="text" name="search" id="search" class="form-control" />
+                    <table class="table" id="pokedex">
+                        <thead>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="001.html">
+                                        <img class="img-responsive" src="./img/001.png">
+                                        <h3 class="text-center mg-md">
+                      #001 Bulbasaur
+                      </h3>
+                                    </a>
+                                    <p class="text-center">
+                                        <img src="./img/tipo_planta.png" width="80" class="pull-center">
+                                        <img src="./img/tipo_veneno.png" width="80" class="pull-center">
+                                    </p>
+                                </td>
+                                <td>
+                                    <a href="002.html">
+                                        <img class="img-responsive" src="./img/002.png">
+                                        <h3 class="text-center" mg-md>
+                        #002 Ivysaur
+                      </h3>
+                                        <p class="text-center">
+                                            <img src="./img/tipo_planta.png" width="80" class="pull-center">
+                                            <img src="./img/tipo_veneno.png" width="80" class="pull-center">
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="003.html">
+                                        <img class="img-responsive" src="./img/003.png">
+                                        <h3 class="text-center mg-md">
+                          #003 Venusaur
+                        </h3>
+                                    </a>
+                                    <p class="text-center">
+                                        <img src="./img/tipo_planta.png" width="80" class="pull-center">
+                                        <img src="./img/tipo_veneno.png" width="80" class="pull-center">
+                                    </p>
+                                </td>
+                                <td>
+                                    <a href="003M.html">
+                                        <img class="img-responsive" src="./img/003M.png">
+                                        <h3 class="text-center mg-md">
+                           #003 Mega Ve1nusaur
+                         </h3>
+                                    </a>
+                                    <p class="text-center">
+                                        <img src="./img/tipo_planta.png" width="80" class="pull-center">
+                                        <img src="./img/tipo_veneno.png" width="80" class="pull-center">
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--009M-->
-        <a href="009M.html">
-          <img class="img-responsive" src="./img/009M.png">
-        <h3 class="text-center mg-md">
-          #009 Mega Blastoise
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_agua.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--010-->
-        <a href="010.html">
-          <img class="img-responsive" src="./img/010.png">
-        <h3 class="text-center mg-md">
-          #010 Caterpie
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--011-->
-        <a href="011.html">
-          <img class="img-responsive" src="./img/011.png">
-        <h3 class="text-center mg-md">
-          #011 Metapod
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--012-->
-        <a href="012.html">
-          <img class="img-responsive" src="./img/012.png">
-        <h3 class="text-center mg-md">
-          #012 Butterfree
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-          <img src="./img/tipo_volador.png" width="80" class="pull-center">
-        </p>
-      </div>
-    </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!-- 013 -->
-        <a href="013.html">
-          <img class="img-responsive" src="./img/013.png">
-        <h3 class="text-center mg-md">
-          #013 Weedle
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-          <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!-- 014 -->
-        <a href="014.html">
-          <img class="img-responsive" src="./img/014.png">
-        <h3 class="text-center mg-md">
-          #014 Kakuna
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-          <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--015-->
-        <a href="015.html">
-          <img class="img-responsive" src="./img/015.png">
-        <h3 class="text-center mg-md">
-          #015 Beedrill
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-          <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--015M-->
-        <a href="015M.html">
-          <img class="img-responsive" src="./img/015M.png">
-        <h3 class="text-center mg-md">
-          #015 Mega Beedrill
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_bicho.png" width="80" class="pull-center">
-          <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-        </p>
-      </div>
-    </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--016-->
-        <a href="016.html">
-          <img class="img-responsive" src="./img/016.png">
-        <h3 class="text-center mg-md">
-          #016 Pidgey
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-          <img src="./img/tipo_volador.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--017-->
-        <a href="017.html">
-          <img class="img-responsive" src="./img/017.png">
-        <h3 class="text-center mg-md">
-          #017 Pidgeotto
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-          <img src="./img/tipo_volador.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--018-->
-        <a href="018.html">
-          <img class="img-responsive" src="./img/018.png">
-        <h3 class="text-center mg-md">
-          #018 Pidgeot
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-          <img src="./img/tipo_volador.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--018M-->
-        <a href="018M.html">
-          <img class="img-responsive" src="./img/018M.png">
-        <h3 class="text-center mg-md">
-          #018 Mega Pidgeot
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-          <img src="./img/tipo_volador.png" width="80" class="pull-center">
-        </p>
-      </div>
-    </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--019-->
-        <a href="019.html">
-          <img class="img-responsive" src="./img/019.png">
-        <h3 class="text-center mg-md">
-          #019 Rattata
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--019A-->
-        <a href="019A.html">
-          <img class="img-responsive" src="./img/019A.png">
-        <h3 class="text-center mg-md">
-          #019 Rattata forma Alola
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_siniestro.png" width="80" class="pull-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--020-->
-        <a href="020.html">
-          <img class="img-responsive" src="./img/020.png">
-        <h3 class="text-center mg-md">
-          #020 Raticate
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--020A-->
-        <a href="020A.html">
-          <img class="img-responsive" src="./img/020A.png">
-        <h3 class="text-center mg-md">
-          #020 Raticate forma Alola
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_siniestro.png" width="80" class="pull-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-        </p>
-      </div>
-    </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--021-->
-        <a href="021.html">
-          <img class="img-responsive" src="./img/021.png">
-        <h3 class="text-center mg-md">
-          #021 Spearow
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--022-->
-        <a href="022.html">
-          <img class="img-responsive" src="./img/022.png">
-        <h3 class="text-center mg-md">
-          #022 Fearow
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-          <img src="./img/tipo_normal.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--023-->
-        <a href="023.html">
-          <img class="img-responsive" src="./img/023.png">
-        <h3 class="text-center mg-md">
-          #023 Ekans
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--024-->
-        <a href="024.html">
-          <img class="img-responsive" src="./img/024.png">
-        <h3 class="text-center mg-md">
-          #024 Arbok
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_veneno.png" width="80" class="pull-center">
-        </p>
-      </div>
-    </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--025-->
-        <a href="025.html">
-          <img class="img-responsive" src="./img/025.png">
-        <h3 class="text-center mg-md">
-          #025 Pikachu
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_electrico.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--026-->
-        <a href="026.html">
-          <img class="img-responsive" src="./img/026.png">
-        <h3 class="text-center mg-md">
-          #026 Raichu
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_electrico.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--026A-->
-        <a href="026A.html">
-          <img class="img-responsive" src="./img/026A.png">
-        <h3 class="text-center mg-md">
-          #026 Raichu forma Alola
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_electrico.png" width="80" class="pull-center">
-          <img src="./img/tipo_psiquico.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--027-->
-        <a href="027.html">
-          <img class="img-responsive" src="./img/027.png">
-        <h3 class="text-center mg-md">
-          #027 Sandshrew
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_tierra.png" width="80" class="pull-center">
-        </p>
-      </div>
-    </div>
-    <div class="row voffset">
-      <div class="col-sm-3"><!--027A-->
-        <a href="027A.html">
-          <img class="img-responsive" src="./img/027A.png">
-        <h3 class="text-center mg-md">
-          #027 Sandshrew forma Alola
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_hielo.png" width="80" class="pull-center">
-          <img src="./img/tipo_acero.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--028-->
-        <a href="028.html">
-          <img class="img-responsive" src="./img/028.png">
-        <h3 class="text-center mg-md">
-          #028 Sandslash
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_tierra.png" width="80" class="pull-center">
-        </p>
-      </div>
-      <div class="col-sm-3"><!--028A-->
-        <a href="028A.html">
-          <img class="img-responsive" src="./img/028A.png">
-        <h3 class="text-center mg-md">
-          #028 Sandslash forma Alola
-        </h3>
-       </a>
-        <p class="text-center">
-          <img src="./img/tipo_hielo.png" width="80" class="pull-center">
-          <img src="./img/tipo_acero.png" width="80" class="pull-center">
-
-        </p>
-      </div>
-    </div>
-      </div>
-</div>
-
-<!-- bloc-2 END -->
-
-<!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
-<!-- ScrollToTop Button END-->
-
-
-</div>
-<!-- Main container END -->
-
-
 </body>
+
 </html>
+<script>
+    $(document).ready(function() {
+        $('#search').keyup(function() {
+            search_table($(this).val());
+        });
+
+        function search_table(value) {
+            $('#pokedex tr').each(function() {
+                var found = 'false';
+                $(this).each(function() {
+                    if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                        found = 'true';
+                    }
+                });
+                if (found == 'true') {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+    });
+</script>
