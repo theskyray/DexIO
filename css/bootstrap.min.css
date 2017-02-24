@@ -1345,7 +1345,7 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #fff
+    background-color: #333;
 }
 
 button, input, select, textarea {
@@ -2709,7 +2709,6 @@ legend {
     line-height: inherit;
     color: #333;
     border: 0;
-    border-bottom: 1px solid #e5e5e5
 }
 
 label {

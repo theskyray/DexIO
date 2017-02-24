@@ -1,79 +1,46 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="us">
+
 <head>
-    <meta charset="utf-8">
-    
-    <meta name="keywords" content="">
+    <meta charset="UTF-8" />
+    <title>A Pok&eacute;mon Calculator</title>
+    <link type="text/css" rel="stylesheet" href="./select2/select2.css" />
+    <link type="text/css" rel="stylesheet" href="./ap_calc.css?v2" />
+    <link type="text/css" rel="stylesheet" href="./bootstrap.css" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    
+
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="./css/animate.min.css"><link rel="stylesheet" href="./css/font-awesome.min.css"><link rel="stylesheet" href="./css/et-line.min.css">
-    
+
 	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/blocs.min.js"></script>
-    <title>Editor</title>
-
-    
-<!-- Google Analytics -->
- 
-<!-- Google Analytics END -->
-    
+    <title>Calculadora</title>
 </head>
+
 <body>
-<!-- Main container -->
-<div class="page-container">
-    
-<!-- bloc-0 -->
-<div class="bloc bgc-carmine-pink d-bloc" id="bloc-0">
-	<div class="container bloc-sm">
-		<nav class="navbar row">
-			<div class="navbar-header">
-				<a class="navbar-brand hidden-xs hidden-sm ltc-white" href="index.html">DexIO</a>
-				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse navbar-1 collapse">
-				<ul class="site-navigation nav navbar-nav">
-					<li>
-						<a href="index.html">Inicio</a>
-					</li>
-					<li>
-						<a href="pokedex.html">Pokedex</a>
-					</li>
-					<li>
-						<a href="editor.html">Editor</a>
-					</li>
-					<li>
-						<a href="calculadora.html">Calculadora</a>
-					</li>
-					<li>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-</div>
-<!-- bloc-0 END -->
 
-<!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
-<!-- ScrollToTop Button END-->
-
-
-</div>
-<!-- Main container END -->
-    
+<div class="header"><div class="header-inner">
+    <ul class="nav">
+        <li><a class="button nav-first" href="/"><img src="./pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
+        <li><a class="button" href="/dex/">Pok&eacute;dex</a></li>
+        <li><a class="button" href="//replay.pokemonshowdown.com/">Replays</a></li>
+        <li><a class="button" href="/ladder/">Ladder</a></li>
+        <li><a class="button nav-last" href="/forums/">Forum</a></li>
+    </ul>
+    <ul class="nav nav-play">
+        <li><a class="button greenbutton nav-first nav-last" href="//play.pokemonshowdown.com/">Play</a></li>
+    </ul>
+    <div style="clear:both"></div>
+</div></div>
 <div class="wrapper">
 
     <div>
-        <span class="title-text"></span>
+        <span class="title-text">Pok&eacute;mon Damage Calculator</span>
         <span title="Select the generation.">
-        <center>
             <input class="gen btn-input" type="radio" name="gen" value="1" id="gen1" /><label class="btn btn-small btn-left" for="gen1">RBY</label>
             <input class="gen btn-input" type="radio" name="gen" value="2" id="gen2" /><label class="btn btn-small btn-mid" for="gen2">GSC</label>
             <input class="gen btn-input" type="radio" name="gen" value="3" id="gen3" /><label class="btn btn-small btn-mid" for="gen3">ADV</label>
@@ -85,7 +52,11 @@
         <span title="Select the output notation.">
             <input class="notation btn-input" type="radio" name="notation" id="pixels" value="px" /><label class="btn btn-small btn-left" for="pixels">48th</label>
             <input class="notation btn-input" type="radio" name="notation" id="percentage" value="%" /><label class="btn btn-small btn-right" for="percentage">100%</label>
-            </center>
+        </span>
+        <span title="Select the calculator's mode of function.">
+            <input class="mode btn-input" type="radio" name="mode" id="all-vs-one" /><label class="btn btn-wide btn-right right" for="all-vs-one">All vs One</label>
+            <input class="mode btn-input" type="radio" name="mode" id="one-vs-all" /><label class="btn btn-wide btn-mid right" for="one-vs-all">One vs All</label>
+            <input class="mode btn-input" type="radio" name="mode" id="one-vs-one" checked="checked" /><label class="btn btn-wide btn-left right" for="one-vs-one">One vs One</label>
         </span>
     </div>
     <hr />
@@ -145,23 +116,23 @@
         <div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript.)</span>
         </div>
     </div>
-
+    
     <div class="panel">
         <fieldset class="poke-info" id="p1">
-            <legend align="center">Primer pokemon</legend>
+            <legend align="center">Pok&eacute;mon 1</legend>
             <input type="text" class="set-selector calc-trigger" />
             <div class="info-group">
                 <div>
-                    <label>Tipo</label>
+                    <label>Type</label>
                     <select class="type1 terrain-trigger calc-trigger"></select>
                     <select class="type2 terrain-trigger calc-trigger"></select>
                 </div>
                 <div>
-                    <label>Nivel</label>
+                    <label>Level</label>
                     <input class="level calc-trigger" value="100" />
                 </div>
                 <div class="hide">
-                    <label>Peso (kg)</label>
+                    <label>Weight (kg)</label>
                     <input class="weight calc-trigger" value="10.0" />
                 </div>
             </div>
@@ -560,7 +531,7 @@
             </div>
         </fieldset>
     </div>
-
+    
     <div class="panel">
         <div>
             <fieldset class="field-info">
@@ -700,7 +671,7 @@
                         <input class="btn-input calc-trigger" type="checkbox" id="helpingHandR" />
                         <label class="btn btn-xxwide" for="helpingHandR">Helping Hand</label>
                     </div>
-                </div>
+                </div>    
                 <div class="btn-group gen-specific g5 g6 g7">
                     <div class="left" title="Is the Pok&eacute;mon protected by an ally's Friend Guard?">
                         <input class="btn-input calc-trigger" type="checkbox" id="friendGuardL" />
@@ -1179,6 +1150,6 @@
 
     <div style="clear:both;padding:20px;text-align:right"><p><a href="https://github.com/Zarel/honko-damagecalc" target="_blank">GitHub repository for the damage calculator</a></p></div>
 
-
 </body>
+
 </html>
