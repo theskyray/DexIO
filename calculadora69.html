@@ -7,89 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="./css/animate.min.css"><link rel="stylesheet" href="./css/font-awesome.min.css"><link rel="stylesheet" href="./css/et-line.min.css">
+  <style></style>
 
-  <!-- Insert this line above script imports  -->
-  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-  <!-- normal script imports etc  -->
-  <script src="js/jquery-2.1.0.min.js"></script>
-
-  <!-- Insert this line after script imports -->
-  <script>if (window.module) module = window.module;</script>
+	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/blocs.min.js"></script>
-  <style> #title-bar {
-                -webkit-app-region: drag;
-                height: 40px;
-                text-align: center;
-                line-height: 40px;
-                vertical-align: middle;
-                padding: none;
-                margin: 0px;
-            }</style>
-    <title>Inicio</title>
+	<script src="./js/jqBootstrapValidation.js"></script>
+	<script src="./js/formHandler.js"></script>
+    <title>Calculadora</title>
 
 
 <!-- Google Analytics -->
 
 <!-- Google Analytics END -->
 
-    <link type="text/css" rel="stylesheet" href="./select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./ap_calc.css?v2" />
-
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/et-line.min.css">
-
-    <title>Calculadora</title>
 </head>
-<body link="#7a7a7a">
-  <div class="page-container">
-    <div class="title-bar"></div>
+<body>
+<!-- Main container -->
+<div class="page-container">
 
-  <!-- bloc-0 -->
-  <div class="bloc bgc-carmine-pink d-bloc" id="bloc-0">
-  	<div class="container bloc-sm">
-  		<nav class="navbar row">
-  			<div class="navbar-header">
-  				<a class="navbar-brand hidden-xs hidden-sm ltc-white" href="index.html">DexIO</a>
-  				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-  					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-  				</button>
-  			</div>
-  			<div class="navbar-collapse navbar-1 collapse">
-  				<ul class="site-navigation nav navbar-nav">
-  					<li>
-  						<a href="index.html">Inicio</a>
-  					</li>
-  					<li>
-  						<a href="pokedex.html">Pokedex</a>
-  					</li>
-  					<li>
-  						<a href="editor.html">Editor</a>
-  					</li>
-  					<li>
-  						<a href="calculadora.html">Calculadora</a>
-  					</li>
-  					<li>
-  					</li>
-  					<li>
-  						<a href="equipos.html">Equipos</a>
-  					</li>
-  					<li>
-  						<a href="sobre-dexio.html">Sobre-DexIO</a>
-  					</li>
-  				</ul>
-  			</div>
-  		</nav>
-  	</div>
-  </div>
-<div class="bloc l-bloc bgc-white " id="bloc-3">
+<!-- bloc-0 -->
+<div class="bloc bgc-carmine-pink d-bloc" id="bloc-0">
+	<div class="container bloc-sm">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="navbar-brand hidden-xs hidden-sm ltc-white" href="index.html">DexIO</a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse navbar-1 collapse">
+				<ul class="site-navigation nav navbar-nav">
+					<li>
+						<a href="index.html">Inicio</a>
+					</li>
+					<li>
+						<a href="pokedex.html">Pokedex</a>
+					</li>
+					<li>
+						<a href="editor.html">Editor</a>
+					</li>
+					<li>
+						<a href="calculadora.html">Calculadora</a>
+					</li>
+					<li>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- bloc-0 END -->
+
+<!-- bloc-3 -->
+<div class="bloc l-bloc bgc-white" id="bloc-3">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
@@ -765,7 +739,7 @@
             <fieldset class="poke-import">
             <h2 align="center">Importar equipo</h2>
                 <div id="import-1_wrapper" class="dataTables_wrapper no-footer">
-                    <form class="import-team">
+                    <form class="import-team" success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
                         <textarea class="import-team-text"></textarea>
                     </form>
                 </div>
@@ -1207,99 +1181,6 @@
 </div>
 <!-- Main container END -->
 
-    <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="./js/lodash.min.js"></script>
-    <script type="text/javascript" src="./select2/select2.min.js"></script>
-    <script type="text/javascript" src="./js/data/pokedex.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_sm.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_xy.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_bw.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_dpp.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_rse.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_gsc.js"></script>
-    <script type="text/javascript" src="./js/data/setdex_rby.js"></script>
-    <script type="text/javascript" src="./js/data/stat_data.js"></script>
-    <script type="text/javascript" src="./js/data/type_data.js"></script>
-    <script type="text/javascript" src="./js/data/nature_data.js"></script>
-    <script type="text/javascript" src="./js/data/ability_data.js"></script>
-    <script type="text/javascript" src="./js/data/item_data.js"></script>
-    <script type="text/javascript" src="./js/data/move_data.js"></script>
-    <script type="text/javascript" src="./js/ap_calc.js"></script>
-    <script type="text/javascript" src="./js/calc_ab.js"></script>
-    <script type="text/javascript" src="./js/damage.js"></script>
-    <script type="text/javascript" src="./js/damage_dpp.js"></script>
-    <script type="text/javascript" src="./js/damage_rse.js"></script>
-    <script type="text/javascript" src="./js/damage_gsc.js"></script>
-    <script type="text/javascript" src="./js/damage_rby.js"></script>
-    <script type="text/javascript" src="./js/ko_chance.js"></script>
-    <script type="text/javascript" src="./js/moveset_import.js"></script>
-    <div class="bloc bloc-bg-texture texture-geometry-shapes b-parallax bgc-outer-space d-bloc" id="bloc-10">
-    	<div class="container bloc-lg">
-    		<div class="row animated vanishIn ">
-    			<div class="col-sm-3">
-    				<div class="text-center">
-    					<span class="fa fa-language icon-md icon-round"></span>
-    				</div>
-    				<h3 class="text-center mg-md">
-    					Cambiar idioma
-    				</h3>
-    				<p class="text-center">
-    					Swap between English and Spanish&nbsp;
-    				</p>
-    			</div>
-    			<div class="col-sm-3">
-    				<div class="text-center">
-    					<span class="fa fa-certificate icon-round icon-md"></span>
-    				</div>
-    				<h3 class="text-center mg-md">
-    					Modo claro
-    				</h3>
-    				<p class="text-center">
-    					Modo por defecto, interfaz clara e imágenes tradicionales
-    				</p>
-    			</div>
-    			<div class="col-sm-3">
-    				<div class="text-center">
-    					<span class="fa fa-moon-o icon-round icon-md"></span>
-    				</div>
-    				<h3 class="text-center mg-md">
-    					Modo oscuro
-    				</h3>
-    				<p class="text-center">
-    					Modo alternativ, interfaz oscura e imágenes tipo acuarela
-    				</p>
-    			</div>
-    			<div class="col-sm-3">
-    				<div class="text-center">
-    					<span class="fa fa-gamepad icon-round icon-md"></span>
-    				</div>
-    				<h3 class="text-center mg-md">
-    					Modo retro
-    				</h3>
-    				<p class="text-center">
-    					Nueva interfaz, aspecto nostálgico con gráficos de 8 bits
-    				</p>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <!-- Footer - bloc-10 END -->
-
-    <!-- Footer - bloc-11 -->
-    <div class="bloc bgc-dark-slate-blue d-bloc" id="bloc-11">
-    	<div class="container bloc-lg">
-    		<div class="row animated vanishIn">
-    			<div class="col-xs-12 col-md-8 col-md-offset-2">
-    				<h3 class="statement-bloc-text">
-    					Esta app me ha llevado bastante tiempo, y gracias a ciertas personas, ha podido salir a flote, espero que te sea muy útil esta aplicación y si tienes alguna sugerencia o encuentras algún error, te agradecería que te pusieses en contacto conmigo para poder arreglarlo y mejorar la app, otra vez más muchas gracias por haberle dado una oportunidad a este proyecto, espero que le saques un buen partido
-    				</h3>
-    				<p class="text-center">
-    					<strong>germanblasco@icloud.com</strong>
-    				</p>
-    			</div>
-    		</div>
-    	</div>
-    </div>
 
 </body>
 </html>

@@ -128,14 +128,6 @@ a img {
 }
 
 /* general page styling */
-html, body {
-    font: 10pt Verdana, sans-serif;
-    background-color: white;
-    color: black;
-    margin: 0;
-    padding: 0;
-    min-width: 100em;
-}
 .wrapper {
     padding: 0 1em;
     max-width: 1247px;
