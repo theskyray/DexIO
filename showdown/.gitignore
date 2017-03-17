@@ -1,0 +1,13 @@
+/sprites/
+/audio/
+/config/
+/index.php
+/index.html
+/data/*
+!/data/graphics.js
+!/data/learnsets-g6.js
+node_modules/
+eslint-cache/
+.DS_Store
+Thumbs.db
+npm-debug.log

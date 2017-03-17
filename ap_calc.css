@@ -137,9 +137,6 @@ div.wrapper > div > span {
     padding-right: 5px;
 }
 fieldset {
-	    border-radius: 10px;
-    float: left;
-    background-color: rgba(250, 248, 245, 1);
 }
 legend {
     font-weight: bold;
@@ -170,7 +167,6 @@ th {
     display: inline-block;
 }
 .poke-info {
-    width: 28em;
 }
 .field-info, .poke-import {
     text-align: center;
